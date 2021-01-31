@@ -41,85 +41,88 @@
                     and
                     scrambled it to make a type specimen book./p>
             </div>
-
-
-            <div class="booking-form">
-                <h3>Book Ocean Time</h3>
-                <div class="input-group">
-                    <label for="">Flying From</label>
-                    <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
-                </div>
-                <div class="input-group">
-                    <label for="">Flying To</label>
-                    <input class="inp-style" type="text" name="" placeholder="New York, United States">
-                </div>
-                <div class="inputs">
+                <div class="booking-form">
+                    <h3>Book Ocean Time</h3>
                     <div class="input-group">
-                        <label" for="">Departure</label>
-                            <input class="inp-style" type="date" name="">
+                        <label for="">Flying From</label>
+                        <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh" id="start-Input">
                     </div>
                     <div class="input-group">
-                        <label for="">Return</label>
-                        <input class="inp-style" type="date" name="">
+                        <label for="">Flying To</label>
+                        <input class="inp-style" type="text" name="" placeholder="New York, United States" id="end-Input">
                     </div>
-                </div>
-                <div class="input-group f-class">
-                    <div>
-                        <label for="First">First Class ($<span id="firstClassPrice">150</span> )</label>
-                        <input class="inp-style inp-width" type="number" name="First" id="first-Input" value="0">
-                    </div>
-                    <div class="plus-minus-btn">
-                        <i class="fas fa-minus color" onclick="HandleTicketCounting('first',false)"></i>
-                        <i class="fas fa-plus color" onclick="HandleTicketCounting('first',true)"></i>
-                    </div>
-                </div>
-
-                <div class="input-group f-class">
-                    <div>
-                        <label for="Economy">Economy ($<span id="economyClassPrice">100</span> )</label>
-                        <input class="inp-style inp-width" type="number" name="Economy" id="economy-Input" value="0">
-                    </div>
-                    <div class="plus-minus-btn">
-                        <i class="fas fa-minus color" onclick="HandleTicketCounting('economy',false)"></i>
-                        <i class="fas fa-plus color" onclick="HandleTicketCounting('economy',true)"></i>
-                    </div>
-                </div>
-                <div class="calculations">
-                    <div class="amount">
-                        <div class="left">
-                            <p>Subtotal</p>
+                    <div class="inputs">
+                        <div class="input-group">
+                            <label" for="">Departure</label>
+                                <input class="inp-style" type="date" name="" id="start-Date-Input">
                         </div>
-                        <div class="right">
-                            <p>$<span id="subtotal">0</span> </p>
+                        <div class="input-group">
+                            <label for="">Return</label>
+                            <input class="inp-style" type="date" name="" id="return-Date-Input">
+                        </div>
+                    </div>
+                    <div class="input-group f-class">
+                        <div>
+                            <label for="First">First Class ($<span id="firstClassPrice">150</span> )</label>
+                            <input class="inp-style inp-width" type="number" name="First" id="first-Input" value="0">
+                        </div>
+                        <div class="plus-minus-btn">
+                            <i class="fas fa-minus color" onclick="HandleTicketCounting('first',false)"></i>
+                            <i class="fas fa-plus color" onclick="HandleTicketCounting('first',true)"></i>
                         </div>
                     </div>
 
-                    <div class="amount">
-                        <div class="left">
-                            <p>Charge 10% VAT</p>
+                    <div class="input-group f-class">
+                        <div>
+                            <label for="Economy">Economy ($<span id="economyClassPrice">100</span> )</label>
+                            <input class="inp-style inp-width" type="number" name="Economy" id="economy-Input"
+                                value="0">
                         </div>
-                        <div class="right">
-                            <p>$<span id="vat">0</span> </p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="amount">
-                        <div class="left">
-                            <h4>Total</h4>
-                        </div>
-                        <div class="right">
-                            <p>$<span id="total">0</span> </p>
+                        <div class="plus-minus-btn">
+                            <i class="fas fa-minus color" onclick="HandleTicketCounting('economy',false)"></i>
+                            <i class="fas fa-plus color" onclick="HandleTicketCounting('economy',true)"></i>
                         </div>
                     </div>
+                    <div class="calculations">
+                        <div class="amount">
+                            <div class="left">
+                                <p>Subtotal</p>
+                            </div>
+                            <div class="right">
+                                <p>$<span id="subtotal">0</span> </p>
+                            </div>
+                        </div>
+
+                        <div class="amount">
+                            <div class="left">
+                                <p>Charge 10% VAT</p>
+                            </div>
+                            <div class="right">
+                                <p>$<span id="vat">0</span> </p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="amount">
+                            <div class="left">
+                                <h4>Total</h4>
+                            </div>
+                            <div class="right">
+                                <p>$<span id="total">0</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <input class="btn-style btn" id="bookingBtn" type="submit">
                 </div>
-                <button class="btn-style btn" id="bookingBtn">Book Now</button>
-            </div>
         </main>
     </div>
 
     <div class="container passenger-section" id="printDetails">
-        <h2>Print Copy</h2>
-        <table style="width:100%" >
+        <h1 style="color: darkgrey; margin-top: 20px;">Passenger Copy</h1>
+        <h3>From : <span id="start"></span></h3>
+        <h3>To : <span id="end"></span></h3>
+        <h3>Journey Date : <span id="startingDate"></span></h3>
+        <h3>Return Date : <span id="returningDate"></span></h3>
+        <table style="width:100%">
             <tr>
                 <th>Class Name</th>
                 <th>Passenger</th>
@@ -139,7 +142,7 @@
                 <td id="economyClassPassenger">Passenger Count</td>
             </tr>
         </table>
-        <button onclick="window.print()">Print</button>
+        <button onclick="window.print()" class="printBtn btn">Print</button>
     </div>
     <script src="script.js"></script>
 </body>

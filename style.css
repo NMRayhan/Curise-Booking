@@ -129,7 +129,7 @@ a.active {
     gap: 10px;
 }
 
-.btn-style {
+input[type=submit] {
     display: block;
     width: 100%;
     padding: 10px;
@@ -154,6 +154,15 @@ a.active {
     cursor: pointer;
 }
 
+.printBtn{
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    background-color: #295e2d;
+}
 .btn {
     font-size: 20px;
 }
@@ -173,8 +182,5 @@ td {
 th,
 td {
     padding: 15px;
-}
-
-td,th{
     text-align: left;
 }

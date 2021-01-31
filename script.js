@@ -33,7 +33,7 @@ document.getElementById('full-body').style.display = 'block';
 document.getElementById('body').style.background = 'block';
 
 document.getElementById('bookingBtn').addEventListener("click", function(){
-    confirm("Are You Confirm This Purchase")
+    // confirm("Are You Confirm This Purchase")
     document.getElementById('full-body').style.display = 'none';
     document.getElementById('body').style.background = 'none';
     document.getElementById('printDetails').style.display = 'block'
@@ -57,6 +57,22 @@ document.getElementById('bookingBtn').addEventListener("click", function(){
     // table Total set
     const total = document.getElementById('total').innerText;
     document.getElementById('tableTotal').innerText = total;
+
+    //starting Place Set
+    const start_input = document.getElementById('start-Input').value;
+    document.getElementById('start').innerText = start_input;
+
+    // Return Place Set 
+    const end_input = document.getElementById('end-Input').value;
+    document.getElementById('end').innerText = end_input;
+
+    // journey Date 
+    const start_Date_Input = document.getElementById('start-Date-Input').value;
+    document.getElementById('startingDate').innerText = start_Date_Input;
+
+    // return Date 
+    const return_Date_Input = document.getElementById('return-Date-Input').value;
+    document.getElementById('returningDate').innerText = return_Date_Input;
 })
 
 
