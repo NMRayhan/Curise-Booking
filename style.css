@@ -124,6 +124,7 @@ nav ul li a:hover, a.active{
 }
 .color{
     color: #E33741;
+    cursor: pointer;
 }
 .btn:hover{
     cursor: pointer;
