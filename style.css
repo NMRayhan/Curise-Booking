@@ -122,3 +122,12 @@ nav ul li a:hover, a.active{
     display: flex;
     justify-content: space-between;
 }
+.color{
+    color: #E33741;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.btn{
+    font-size: 20px;
+}
