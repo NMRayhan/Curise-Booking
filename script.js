@@ -28,4 +28,35 @@ function HandleTicketCounting(ticketClass,isIncrease){
     priceCalculation();
 }
 
+document.getElementById('printDetails').style.display = 'none'
+document.getElementById('full-body').style.display = 'block';
+document.getElementById('body').style.background = 'block';
+
+document.getElementById('bookingBtn').addEventListener("click", function(){
+    confirm("Are You Confirm This Purchase")
+    document.getElementById('full-body').style.display = 'none';
+    document.getElementById('body').style.background = 'none';
+    document.getElementById('printDetails').style.display = 'block'
+
+    // firstClassPassenger 
+    const firstClassPassenger = document.getElementById('first-Input').value;
+    document.getElementById('firstClassPassenger').innerText = firstClassPassenger
+
+    // economyClassPassenger
+    const economyClassPassenger = document.getElementById('economy-Input').value;
+    document.getElementById('economyClassPassenger').innerText = economyClassPassenger
+
+    //subTotal Value Set
+    const subtotal = document.getElementById('subtotal').innerText
+    document.getElementById('tableSubTotal').innerText = subtotal;
+
+    //table Vat set
+    const vat = document.getElementById('vat').innerText;
+    document.getElementById('tableVat').innerText = vat;
+
+    // table Total set
+    const total = document.getElementById('total').innerText;
+    document.getElementById('tableTotal').innerText = total;
+})
+
 
