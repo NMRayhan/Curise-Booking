@@ -28,29 +28,4 @@ function HandleTicketCounting(ticketClass,isIncrease){
     priceCalculation();
 }
 
-// 2nd Level
-// function HandleTicketCounting_first(isIncrease){
-//     const input = document.getElementById('Input').value;
-//     const inputNumber = parseInt(input);
-//     var ticketCount = inputNumber;
-//     if(isIncrease === true){
-//         ticketCount =  ticketCount + 1;
-//     }if(isIncrease === false &&  ticketCount > 0){
-//         ticketCount =  ticketCount - 1;
-//     }
-//     document.getElementById('Input').value =  ticketCount;
-// }
-
-// function HandleTicketCounting_economy(isIncrease){
-//     const input = document.getElementById('economy-Input').value;
-//     const inputNumber = parseInt(input);
-//     var ticketCount = inputNumber;
-//     if(isIncrease === true){
-//         ticketCount =  ticketCount + 1;
-//     }if(isIncrease === false &&  ticketCount > 0){
-//         ticketCount =  ticketCount - 1;
-//     }
-//     document.getElementById('economy-Input').value =  ticketCount;
-// }
-
 
